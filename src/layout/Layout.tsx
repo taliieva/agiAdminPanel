@@ -9,7 +9,7 @@ const Layout = ({children}) => {
       <header>
         <Header/>
       </header>
-      <main>
+      <main style={{backgroundColor:"black"}}>
         <HStack gap={0}>
             <Navbar/>
             {children}

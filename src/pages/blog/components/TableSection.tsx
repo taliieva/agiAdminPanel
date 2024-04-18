@@ -18,36 +18,123 @@ const TableSection = () => {
     fetchBlogs();
   }, []);
   return (
-    <Box bg="black" width="85%" height="95vh" color="white" padding="20px">
+    <Box
+      bg="black"
+      width="85%"
+      height="100vh"
+      color="white"
+      padding="20px"
+      mt="70px"
+    >
       <Heading mb="20px" fontFamily="Inter">
         Blogs
       </Heading>
-      <TableContainer w="95%">
-        <Table variant="simple" width="100%" border="1px solid white">
-          <Thead>
-            <Tr textAlign="left" h="40px">
-              <Th width="5%">id</Th>
-              <Th width="20%">title</Th>
-              <Th width="10%">content</Th>
-              <Th width="20%">imageUrl</Th>
-              <Th width="15%">author</Th>
-              <Th width="10%">created Date</Th>
+      <Table variant="striped" width="100%" marginBottom="1rem" color="white">
+        <Thead>
+          <Tr textAlign="left" h="40px">
+            <Th
+              verticalAlign="bottom"
+              borderTop="1px solid #2c2e33"
+              padding="0.9375rem"
+            >
+              id
+            </Th>
+            <Th
+              verticalAlign="bottom"
+              borderTop="1px solid #2c2e33"
+              padding="0.9375rem"
+            >
+              title
+            </Th>
+            <Th
+              verticalAlign="bottom"
+              borderTop="1px solid #2c2e33"
+              padding="0.9375rem"
+            >
+              content
+            </Th>
+            <Th
+              verticalAlign="bottom"
+              borderTop="1px solid #2c2e33"
+              padding="0.9375rem"
+            >
+              imageUrl
+            </Th>
+            <Th
+              verticalAlign="bottom"
+              borderTop="1px solid #2c2e33"
+              padding="0.9375rem"
+            >
+              author
+            </Th>
+            <Th
+              verticalAlign="bottom"
+              borderTop="1px solid #2c2e33"
+              padding="0.9375rem"
+            >
+              created Date
+            </Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {blogs.map((blog, index) => (
+            <Tr key={index} h="30px" borderBottom="1px solid white">
+              {/* <Td>{blog?.id}</Td>
+              <Td>{blog?.title}</Td>
+              <Td>{blog?.content}</Td>
+              <Td>{blog?.imageUrl}</Td>
+              <Td>{blog?.author}</Td>
+              <Td>{blog?.createdDate}</Td> */}
+              <Td
+                w="50px"
+                verticalAlign="top"
+                borderTop="1px solid #2c2e33"
+                padding="0.9375rem"
+              >
+                {blog.id}
+              </Td>
+              <Td
+                verticalAlign="top"
+                borderTop="1px solid #2c2e33"
+                padding="0.9375rem"
+                maxH="20px"
+                maxWidth="90px" 
+                overflowX="auto" 
+              >
+                {blog.title}
+              </Td>
+              <Td
+                verticalAlign="top"
+                borderTop="1px solid #2c2e33"
+                padding="0.9375rem"
+              >
+                1
+              </Td>
+              <Td
+                verticalAlign="top"
+                borderTop="1px solid #2c2e33"
+                padding="0.9375rem"
+              >
+                1
+              </Td>
+              <Td
+                verticalAlign="top"
+                borderTop="1px solid #2c2e33"
+                padding="0.9375rem"
+              >
+                1
+              </Td>
+              <Td
+                verticalAlign="top"
+                borderTop="1px solid #2c2e33"
+                padding="0.9375rem"
+              >
+                1
+              </Td>
             </Tr>
-          </Thead>
-          <Tbody>
-            {blogs.map((blog, index) => (
-              <Tr key={index} h="30px">
-                <Td width="5%">{blog?.id}</Td>
-                <Td width="20%">{blog?.title}</Td>
-                <Td width="10%">{blog?.content}</Td>
-                <Td width="20%">{blog?.imageUrl}</Td>
-                <Td width="15%">{blog?.author}</Td>
-                <Td width="10%">{blog?.createdDate}</Td>
-              </Tr>
-            ))}
-          </Tbody>
-        </Table>
-      </TableContainer>
+          ))}
+        </Tbody>
+      </Table>
     </Box>
   );
 };
