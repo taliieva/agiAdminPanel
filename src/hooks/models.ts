@@ -6,3 +6,14 @@ type TUseBlog = {
     author: string;
     createdDate: string
 }
+
+type TUseEvent = {
+    id:number;
+    title: string;
+    description:string;
+    author: string;
+    startDate: string;
+    endDate: string;
+    imageUrl: string,
+    googleFormLink: string
+}

@@ -1,12 +1,10 @@
 import './App.css';
-import Header from './components/Header.tsx';
-import Layout from './layout/Layout.tsx';
-import BlogPage from './pages/blog/BlogPage.tsx';
+import Routers from './routes/index.tsx';
 
 function App() {
   return (
     <div className="App">
-      <BlogPage/>
+      <Routers/>
     </div>
   );
 }
